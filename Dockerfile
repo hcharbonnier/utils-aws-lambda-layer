@@ -2,6 +2,7 @@ FROM amazonlinux
 
 RUN yum install zip -y
 RUN yum install unzip -y
+RUN yum install jq -y
 RUN mkdir -p /tmp/utils-lambda-layer
 
 CMD export IGNORED_LIBS="linux-vdso.so|libc.so.6|ld-linux-x86-64.so" && \
